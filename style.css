@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+:root, :root.dark {
+    --primary-bg: #22252d;
+    --color-fg: #f8f8f8;
+    --secondary-bg: #292d36;
+    --buttons-bg: #272b33;
+}
+
+:root.light {
+    --primary-bg: #fff;
+    --color-fg: #292d36;
+    --secondary-bg: #f9f9f9;
+    --buttons-bg: #f7f7f7;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.Calculator {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--primary-bg);
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+}
+
+.dark_mode {
+    margin: 4px auto;
+    background: var(--buttons-bg);
+    padding: 4px 6px;
+    border-radius: 8px;
+}
+
+.dark_mode .dark, .dark_mode .light {
+    font-size: 1rem;
+    color: var(--color-fg);
+    margin: 2px 8px;
+    cursor: pointer;
+}
+
+
+input {
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: var(--primary-bg);
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+    font-size: 35px;
+    text-align: right;
+    cursor: pointer;
+    color: var(--color-fg);
+
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50px;
+    background: var(--buttons-bg);
+    color: var(--color-fg);
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.equalBtn {
+    background-color: #fb7c14;
+}
+
+.operator {
+    color: #6dee0a;
+}
